@@ -58,5 +58,5 @@ def init_model(engine):
 
 # Import your model modules here.
 from inviteexportmail.model.auth import User, Group, Permission
-
-__all__ = ('User', 'Group', 'Permission')
+from .emaildatajm import SysMUser, SysMUserExport
+__all__ = ('User', 'Group', 'Permission', 'SysMUser', SysMUserExport)

@@ -14,7 +14,7 @@ from tgext.admin.controller import AdminController
 
 from inviteexportmail.lib.base import BaseController
 from inviteexportmail.controllers.error import ErrorController
-
+from .manage import ExportDataMailJMController
 __all__ = ['RootController']
 
 
@@ -36,7 +36,7 @@ class RootController(BaseController):
     admin = AdminController(model, DBSession, config_type=TGAdminConfig)
 
     error = ErrorController()
-
+    manage = ExportDataMailJMController()
     def _before(self, *args, **kw):
         tmpl_context.project_name = "inviteexportmail"
 
